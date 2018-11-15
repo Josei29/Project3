@@ -1,0 +1,40 @@
+.budgetTable {
+    width: 50%;
+    margin: 0 auto;
+    float: left;
+}
+
+.firstTable th:last-child {
+    border-right: 1px solid;
+}
+
+.firstTable td:last-child {
+    border-right: 1px solid;
+}
+
+.addBudget {
+    background: #5085A5;
+    margin-top: 20px;
+}
+
+.addBudget:hover {
+    background: #8FC1E3;
+}
+
+.addBudget:focus {
+    background: #31708E;
+}
+
+.deleteOption:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 444px) {
+    .addBudget {
+        padding: 10px;
+    }
+
+    .material-icons {
+        padding: 0;
+    }
+}

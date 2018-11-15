@@ -1,0 +1,19 @@
+html, body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-wrapper {
+    background-color: #31708E;
+}
+
+.hideNav {
+    display: none;
+}
+
+.homeButton {
+    background-color: #5085A5;
+}
+
+.homeButton:hover {
+    background-color: #5085A5;
+}

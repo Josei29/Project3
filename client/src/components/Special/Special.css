@@ -1,0 +1,52 @@
+.specialTitle {
+    text-align: center;
+    font-size: 30px;
+}
+
+.specialTable {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.specialTable th:first-child {
+    border-right: 1px solid;
+}
+
+.specialTable td:first-child {
+    border-right: 1px solid;
+} 
+
+.addSpecial {
+    background: #5085A5;
+    margin-top: 20px;
+}
+
+.addSpecial:hover {
+    background: #8FC1E3;
+}
+
+.addSpecial:focus {
+    background: #31708E;
+}
+
+.specialTarget {
+    font-size: 30px;
+    text-align: center;
+}
+
+.specialForm {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+@media only screen and (max-width: 560px) {
+    .specialForm {
+        width: 100%;
+    }
+
+    .addSpecial {
+        padding: 10px;
+        line-height: 0;
+    }
+}

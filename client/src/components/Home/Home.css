@@ -1,0 +1,30 @@
+.white {
+    background-color: rgb(228, 228, 228) !important;
+}
+
+footer.page-footer {
+    padding-top: 0;
+    background-color: #31708E;
+}
+
+.container {
+    color: #FFFFFF;
+}
+
+.header {
+    color: #687864;
+}
+
+.parallaxText {
+    color: #687864 !important;
+}
+
+.parallax-container {
+    height: 600px;
+}
+
+.parallax img {
+    width: 50%;
+    -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(30%);
+}
