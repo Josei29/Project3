@@ -2,6 +2,7 @@ import React from "react";
 import { Parallax, Footer } from "react-materialize";
 import "./Home.css";
 
+// Landing page
 const Home = () => {
     return (
         <div>

@@ -12,6 +12,7 @@ class MainSpecial extends Component {
         total: 0
     }
 
+    // Handling the User data and calculating the total (Target)
     componentDidMount = () => {
         // console.log("MainSpecial", this.props.user);
 
@@ -33,6 +34,7 @@ class MainSpecial extends Component {
 
     }
     
+    // If the User is typing we keep track of it and set the state with the latest
     captureInput = (event) => {
         // console.log(event.target.name, event.target.value)
 
@@ -41,6 +43,7 @@ class MainSpecial extends Component {
         });
     }
 
+    // Creating a new item with our onClick function
     handleNewSpecial = (event) => {
         event.preventDefault();
         // console.log(this.state);

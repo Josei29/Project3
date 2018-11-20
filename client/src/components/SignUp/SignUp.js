@@ -11,6 +11,7 @@ class SignUp extends React.Component {
         password:""
     }
 
+    // If the User is typing we keep track of it and set the state with the latest
     captureInput = (event) => {
         // console.log(event.target.name, event.target.value)
 
@@ -20,6 +21,7 @@ class SignUp extends React.Component {
 
     }
 
+    // Creating a new User, sending the data to our back-end code and waiting for the response
     handleSignUp = (event) => {
         event.preventDefault();
         // console.log("I'm signing up baby", this.state);

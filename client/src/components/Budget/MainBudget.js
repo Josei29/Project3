@@ -15,6 +15,7 @@ class MainBudget extends Component {
         earningsTotal: 0
     }
 
+    // Handling the User data and calculating the total (Earnings and Expenses)
     componentDidMount = () => {
         // console.log("MainBudget user", this.props.user)
         API.getName( this.props.user ).then(response => {
@@ -42,6 +43,7 @@ class MainBudget extends Component {
         });
     }
 
+    // If the User is typing we keep track of it and set the state with the latest
     captureInput = (event) => {
         // console.log(event.target.name, event.target.value)
 
@@ -50,6 +52,7 @@ class MainBudget extends Component {
         });
     }
 
+    // Creating a new item with our onClick function
     handleNewItem = (event) => {
         event.preventDefault();
         // console.log(this.state);

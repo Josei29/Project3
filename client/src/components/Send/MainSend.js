@@ -10,6 +10,7 @@ class MainSend extends Component {
         amount: ""
     }
     
+    // Getting the User data with the latest updates
     componentDidMount = () => {
         // console.log("MainSend", this.props.user);
 
@@ -21,6 +22,7 @@ class MainSend extends Component {
         });
     }
 
+    // If the User is typing we keep track of it and set the state with the latest
     captureInput = (event) => {
         // console.log(event.target.name, event.target.value)
 
@@ -29,6 +31,7 @@ class MainSend extends Component {
         });
     }
 
+    // Function to be able to send money, first we check with our back-end code and wait for the response
     handleSend = (event) => {
         event.preventDefault();
         // console.log(this.state);

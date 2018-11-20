@@ -1,7 +1,10 @@
+// This file will have all the routing, we're connecting our app to the DB
 const express = require("express");
 const router = express.Router();
+// Storing the models in a variable to make it easier to access
 const db = require("../models");
 
+// This Route will get all the User data
 router.get("/api/user/:id", function(req, res) {
     
     db.User.findOne({_id: req.params.id}).populate("budget special").then(function(err, data){ 
@@ -12,6 +15,7 @@ router.get("/api/user/:id", function(req, res) {
     });
 });
 
+// Creating a new User
 router.post("/api/user", function(req, res) {
     db.User.create(req.body, function(err, data) {
         if(err) return res.json(err);
@@ -20,6 +24,7 @@ router.post("/api/user", function(req, res) {
     });
 });
 
+// Login Route to check for the right username and password
 router.post("/login", function(req, res) {
     db.User.findOne({username: req.body.username}, function(err, data) {
         if(!data) return res.json("Wrong");
@@ -32,6 +37,7 @@ router.post("/login", function(req, res) {
     })
 });
 
+// Creating a new item on our Budget 
 router.post("/api/addNewItem", function(req, res) {
 
     if (req.body.newItem.type == 2) req.body.newItem.type = "expenses";
@@ -53,6 +59,7 @@ router.post("/api/addNewItem", function(req, res) {
     });
 });
 
+// Creating a new item on our Special page
 router.post("/api/addNewSpecial", function(req, res) {
     // console.log("ROUTE" , req.body);
     
@@ -79,6 +86,7 @@ router.get("/api/getBudgetItem", function(req, res) {
     })
 });
 
+// When the User wants to send money, we check for the right username and then make the transaction
 router.post("/api/sendMoney", function(req, res) {
     // console.log(req.body);
 
@@ -102,6 +110,7 @@ router.post("/api/sendMoney", function(req, res) {
     })
 });
 
+// Deleting a Budget item
 router.post("/api/deleteBudget", function(req, res) {
     // console.log(req.body);
     db.Budget.deleteOne(req.body, function(err, data) {
@@ -111,6 +120,7 @@ router.post("/api/deleteBudget", function(req, res) {
     });
 });
 
+// Deleting a Special item
 router.post("/api/deleteSpecial", function(req, res) {
     db.Special.deleteOne(req.body, function(err, data) {
         if (err) throw err;

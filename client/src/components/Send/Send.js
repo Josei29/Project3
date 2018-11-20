@@ -10,6 +10,7 @@ class Send extends Component {
         name: ""
     }
 
+    // Getting our User data and sending it to the State object
     getName = (id) => {
         // console.log(id);
         API.getName(id).then(response => {
@@ -20,6 +21,7 @@ class Send extends Component {
         });
     }
     
+    // Getting the User id from our URL
     componentDidMount = () => {
         // console.log(window.location.pathname);
         let x = window.location.pathname.split("/");

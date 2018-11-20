@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Navbar, NavItem } from "react-materialize";
 import "./SideNav.css";
 
+// NavBar after User logs in
 class SideNav extends Component {
 
     render() {

@@ -2,7 +2,8 @@ import React from "react";
 import { Row, Input } from "react-materialize";
 import API from "../../API/API.js";
 import "./Login.css";
- 
+
+// Here we have the Login Modal
 class Login extends React.Component {
 
     state = {
@@ -10,6 +11,7 @@ class Login extends React.Component {
         password:""
     }
 
+    // If the User is typing we keep track of it and set the state with the latest
     captureInput = (event) => {
         // console.log(event.target.name, event.target.value)
 
@@ -19,6 +21,7 @@ class Login extends React.Component {
 
     }
 
+    // Check for username and password using our back-end code, triggered by the onClick function
     handleSignUp = (event) => {
         event.preventDefault();
         // console.log("I'm logging in baby", this.state);

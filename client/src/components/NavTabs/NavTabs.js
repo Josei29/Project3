@@ -4,6 +4,7 @@ import SignUp from "../SignUp/SignUp.js";
 import Login from "../Login/Login.js";
 import "./NavTabs.css";
 
+// Here we have the landing page NavBar
 const NavTabs = () => (
 <div className={  window.location.pathname !== "/" ? "hideNav" : ""}>
   {window.location.pathname === "/" ? <Navbar brand='CashManage' right>

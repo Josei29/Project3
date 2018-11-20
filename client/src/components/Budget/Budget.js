@@ -12,6 +12,7 @@ class Budget extends Component {
         budget: []
     }
 
+    // Getting our User data and sending it to the State object
     getName = (id) => {
         // console.log("getName", id);
         API.getName(id).then(response => {
@@ -24,6 +25,7 @@ class Budget extends Component {
         });
     }
     
+    // Getting the User id from our URL
     componentDidMount = () => {
         // console.log(window.location.pathname);
         let x = window.location.pathname.split("/");
@@ -33,6 +35,7 @@ class Budget extends Component {
         this.getName(x[3]);
     } 
 
+    // Rendering the NavBar and also the Main Component
     render() {
         return(
             <div>

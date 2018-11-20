@@ -1,5 +1,8 @@
+// Here we created a file to handle all the communication with our server-side code and DB
+// Axios will help us with the Requests and Posts
 import axios from "axios";
 
+// Store all functions in a variable so we can later access them easily
 const API = {
     login:function(User) {
         return axios.post("/login", User)
@@ -39,6 +42,6 @@ const API = {
     deleteSpecial: function(item) {
         return axios.post("/api/deleteSpecial", item)
     }
-}
+};
 
-export default API
+export default API;

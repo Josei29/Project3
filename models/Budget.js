@@ -1,3 +1,4 @@
+// Here we're creating our Budget Schema, specifying the type of data
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
